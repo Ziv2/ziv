@@ -46,6 +46,11 @@
         </ul>
     </header>
     <!-- End header -->
+</body>
+
+
+
+
 
 <div>
     <div id="about" align=center>
@@ -76,192 +81,10 @@
             </ul>
         </div>
     </div>
-    <!-- End #about -->
-
-    
-    <meta name="viewport" content="width=device-width", initial-scale=1.0>
-    <title>Interactive Project Tiles</title>
-    <link rel="stylesheet" href="./css/styles.css">
-
-    	<div id="projects" align="center">
-        <h2 class="heading">projects</h2>
-        <div class="projects-block">
-
-
-    <!-- <div class="projects-container"> -->
-        <!-- <div class="arrow left-arrow" onclick="prevProject()">
-    <img src="./images/arrow-clip-art-png-favpng-Utw3gtFkv8FJwRXrkuXw43S1E.png" alt="Previous Project" class="arrow-image" style="cursor: pointer;"> -->
 </div>
-        <div class="project-tile-wrapper">
-            <div class="project-tile" id="current-project">
-                <img src="./images/CHATBOT.jpeg" alt="Project 1" class="project-image">
-                <div class="project-title" style="margin-top: 5px;">Project 1</div>
-                <div class="project-details">
-                    <h3>Project 1</h3>
-                    <p>Details about Project 1. This is where the detailed description goes, including the project's purpose, technologies used, and so on.</p>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="arrow right-arrow" onclick="nextProject()">
-    <img src="./images/Right_Blue_Arrow_Transparent_PNG_Clip_Art_Image.png" alt="Next Project" class="arrow-image" style="cursor: pointer;"> -->
-</div>
+</div>     
+<!-- End #about -->
 
-
-	
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const projects = [
-                {
-                    image: 'images/CHATBOT.jpeg',
-                    title: 'CHATBOT',
-                    details: '<h3>Project 1</h3><p>Details about Project 1. This is where the detailed description goes, including the project\'s purpose, technologies used, and so on.</p>'
-                },
-                {
-                    image: 'images/NLP_AUG_0.4.jpg',
-                    title: 'NLP',
-                    details: '<h3>Project 2</h3><p>Details about Project 2. This is where the detailed description goes, including the project\'s purpose, technologies used, and so on.</p>'
-                }
-                // Add more projects as needed
-            ];
-
-            let currentIndex = 0;
-
-
-            function updateProject(index) {
-                const projectTile = document.getElementById('current-project');
-                projectTile.querySelector('.project-image').src = projects[index].image;
-                projectTile.querySelector('.project-title').textContent = projects[index].title;
-                projectTile.querySelector('.project-details').innerHTML = projects[index].details;
-            }
-
-            // window.prevProject = function() {
-            //     currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
-            //     updateProject(currentIndex);
-            // };
-
-            // window.nextProject = function() {
-            //     currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
-            //     updateProject(currentIndex);
-            // };
-        });
-    </script>
-
-
-<!--<div id="projects" class="background-alt" align=center>
-    <div id="lead" align=center>        
-        <div id="lead-content" align=center>
-            <h1>Ziv Sobol</h1>
-            <h2>Data scientist & ML researcher</h2>
-            <h3><b>Embraces challenges and loves people </b></h3>
-
-             <a href="https://github.com/Ziv2/ziv/blob/main/Files/cv_Ziv.pdf" download="cv_Ziv.pdf" class="btn-rounded-white">Download Resume</a>  
-        </div>
-         End #lead-content -->
-        <!-- Uncomment if you want a background 
-            <div id="lead-overlay"></div>
-
-            <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-                    <Uncomment if you want a background>
-             -->
-        <!--</div>
-         End #lead-down -->
-    <!--</div>
-    End #lead -->
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Project Tiles</title>
-    <style>
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .project-tile {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-tile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .project-title {
-            padding: 1rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .project-details {
-            padding: 1rem;
-            background: rgba(255,255,255,0.95);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .project-tile:hover .project-details {
-            opacity: 1;
-        }
-
-        .project-details h3 {
-            margin-top: 0;
-            color: #333;
-        }
-
-        .project-details p {
-            color: #666;
-            line-height: 1.5;
-        }
-
-        .project-details a {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .project-details a:hover {
-            text-decoration: underline;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-    </style>
-</head>
 
 <head>
     <meta charset="UTF-8">
@@ -269,436 +92,149 @@
     <title>Interactive Project Tiles</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+
+
+    <!-- <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <title>Interactive Project Tiles</title>
+    <link rel="stylesheet" href="./css/styles.css"> -->
+
+    <div id="projects" align="center">
+    <h2 class="heading">projects</h2>
+    <div class="projects-block">
+
+
     <div class="projects-container">
-        <!-- <div class="arrow left-arrow" onclick="prevProject()">&#8592;</div> -->
-        <div class="project-tile-wrapper">
-            <div class="project-tile" id="current-project">
-                <img src="images/CHATBOT.jpeg" alt="images/CHATBOT" class="project-image">
-                <div class="project-title" style="margin-top: 5px;">Project 1</div>
-                <div class="project-details">
-                    <h3>Project 1</h3>
-                    <p>Details about Project 1. This is where the detailed description goes, including the project's purpose, technologies used, and so on.</p>
+    <div class="arrow left-arrow" onclick="prevProject()">
+    <img src="./images/arrow-clip-art-png-favpng-Utw3gtFkv8FJwRXrkuXw43S1E.png" alt="Previous Project" class="arrow-image" style="cursor: pointer;"> -->
+    <div id="projects" class="container">
+        <h2 class="heading">Projects</h2>
+        <div class="projects-block">
+            <div class="projects-container">
+                <!-- Left Arrow -->
+                <div class="arrow left-arrow">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </div>
-            </div>
-        </div>
-    </div>
-
-	
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const projects = [
-                {
-                    image: 'images/CHATBOT.jpeg',
-                    title: 'CHATBOT',
-                    details: '<h3>CHATBOT</h3><p>Details about Project 1. This is where the detailed description goes, including the project\'s purpose, technologies used, and so on.</p>'
-                },
-                {
-                    image: 'images/CHATBOT.jpeg',
-                    title: 'CHATBOT',
-                    details: '<h3>Project 2</h3><p>Details about Project 2. This is where the detailed description goes, including the project\'s purpose, technologies used, and so on.</p>'
-                }
-                // Add more projects as needed
-            ];
-
-            let currentIndex = 0;
-
-            function updateProject(index) {
-                const projectTile = document.getElementById('current-project');
-                projectTile.querySelector('.project-image').src = projects[index].image;
-                projectTile.querySelector('.project-title').textContent = projects[index].title;
-                projectTile.querySelector('.project-details').innerHTML = projects[index].details;
-            }
-
-            // window.prevProject = function() {
-            //     currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
-            //     updateProject(currentIndex);
-            // };
-
-            // window.nextProject = function() {
-            //     currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
-            //     updateProject(currentIndex);
-            // };
-        });
-    </script>
-
-
-
-	
-        <div class="project-tile">
-            <img src="./images/CHATBOT.jpeg" alt="CHATBOT" class="project-image">
-            <div class="project-title">CHATBOT</div>
-            <div class="project-details">
-                <h3>CHATBOT</h3>
-                <p>Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization.</p>
-		    <a href="https://github.com/primrose-deep-learning-schoo/myRobot">link to project</a>
-
-            </div>
-        </div>
-    	<!-- End CHATBOT -->
-
-        <div class="project-tile">
-            <img src="./images/NLP_AUG_0.4.jpg" alt="NLP_AUG" class="project-image">
-            <div class="project-title">NLP augmentation</div>
-            <div class="project-details">
-                <h3>NLP augmentation</h3>
-                <p> Synthetic sentences that preserve meaning, to augment chatbot training.</p>
-		<a href="https://github.com/Ziv2/NLP-Augmentation">View Project</a>
-
-            </div>
-        </div>
-		    <!-- End NLP_AUG -->
-
-	<div class="project-tile">
-            <img src="./My Portfolio_files/Crowdsourced-data-labeling.jpg" alt="Crowdsourced-data-labeling" class="project-image">
-            <div class="project-title">Crowdsourced-data-labeling</div>
-            <div class="project-details">
-                        <h3 align="center">Crowdsource data labeling</h3>
-                            <li>Define and run automatic crowd source labeling, and use it as a backbone for data augmentation.</li>
-                            <li>Whighted voting: Create a learnable wights.</li>
-                            <li>Reward optimization.</li>
-                            <li>Define voting filters.</li>
-                        <ul></ul>
-                        <a href="https://toloka.ai/">View Project</a>
-                    </div>
-            </div>
-		    <!-- End toloka -->
-
-	<div class="project-tile">
-            <img src="./My Portfolio_files/OXITONE.JPG" alt="OXITONE" class="project-image">
-            <div class="project-title">OXITONE: oximeter r&amp;D</div>
-            <div class="project-details">
-		<h3>The first wrist oximeter</h3>
-		<p>
-		    At Oxitone, we invented and got FDA clearance for the first wrist oximeter.
-		</p>
-		<a href="https://www.accessdata.fda.gov/cdrh_docs/pdf16/K163382.pdf">FDA clearance</a>
-		<ul></ul>
-		<a href="https://www.oxitone.com/oxitone-1000m/">Oxitone product</a>		    
-	    </div>
-            </div>
-		    <!-- End OXITONE -->
-
-
-	<div class="project-tile">
-            <img src="./My Portfolio_files/Indigo.jpg" alt="ATJ" class="project-image">
-            <div class="project-title">Aoutomatic Test Jig</div>
-            <div class="project-details">
-		<h3>Aoutomatic Test Jig</h3>
-                        <p>
-                            Optimaized a semi automatic robot, that align optics and lasers array. This optical product needs to fit a tight constraints, 
-                            such as 99.5% accurecy out of 40 micro merter, in few nanoseconds. This accurecy need to be achived in a very noisy enviourment, all around the world, in very wide vriety of claimates condition, and for many years.
-                            This writing head is at the heart of Indigo's products:
-                        </p>
-                        <a href="https://www.hp.com/us-en/industrial-printers/indigo-digital-presses/lep-digital-printing-technology.html">View HP Indigo</a>   
-			    </div>		    
-	    </div>
-            
-                <!-- End ATJ -->
-
-        <div class="project-tile">
-            <img src="./My Portfolio_files/SHAP.jpg" alt="Database Poisoning" class="project-image">
-            <div class="project-title">Database Poisoning</div>
-            <div class="project-details">
-		    <h3>Database poisoning &amp; poisoning detector</h3>
-            </div>
-        </div>
-    	<!-- End poisoning detector -->
                 
-        <div class="project-tile">
-		<img src="./My Portfolio_files/Above panel_small.jpg" alt="Above panel" class="project-image">
-            <div class="project-title">Above panel</div>
-            <div class="project-details">
-                        <h3>Invented a new display technology</h3>
-                        <p>This solution increased Fluorescent dyes lifetime, while improves efficiency and viewing angles.</p>
-                        <a href="https://patents.justia.com/patent/20180246371">View patent</a>
-                        <ul></ul>
-                        <a href="https://patents.justia.com/patent/20180039131">Another patent that I was initiated</a>
+                <!-- Project Tiles -->
+                <div class="project-tile-wrapper">
+                    <div class="project-tile">
+                        <img src="/api/placeholder/400/300" alt="Project 1" class="project-image">
+                        <div class="project-title">Project 1</div>
+                        <div class="project-details">
+                            <h3>Project 1</h3>
+                            <p>Details about Project 1. This is where the detailed description goes, including the project's purpose, technologies used, and so on.</p>
+                        </div>
                     </div>
+                </div>
+                
+                <!-- Right Arrow -->
+                <div class="arrow right-arrow">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
             </div>
-		    <!-- End Above panel -->
-			    
-
-	<div class="project-tile">
-            <img src="./My Portfolio_files/AdTech Stack_0.5.jpg" alt="Real Time Bidding" class="project-image">
-            <div class="project-title">Real Time Bidding</div>
-            <div class="project-details">
-                        <h3>RTB</h3>
-                        <p>
-                            Improve RTB (Real Time Bidding) yeild.
-                        </p>
-                    </div>
-            </div>
-		    <!-- End Real Time Bidding -->
-
-
-        
-        <!-- TODO: 2023 projects tiles -->
+        </div>
+    </div>
     
-
+    <style>
+    .projects-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .project-tile-wrapper {
+        width: 400px;
+        position: relative;
+    }
+    
+    .project-tile {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 15px;
+        transition: transform 0.3s ease;
+    }
+    
+    .project-tile:hover {
+        transform: translateY(-5px);
+    }
+    
+    .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+    
+    .project-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .project-details {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,0.95);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    .project-tile:hover .project-details {
+        display: block;
+    }
+    
+    .arrow {
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        transition: background 0.3s ease;
+    }
+    
+    .arrow:hover {
+        background: #e0e0e0;
+    }
+    </style>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const projectTiles = document.querySelectorAll('.project-tile');
-            projectTiles.forEach(tile => {
-                tile.addEventListener('click', () => {
-                    const details = tile.querySelector('.project-details');
-                    details.classList.toggle('visible');
-                });
-            });
-        });
-    </script>
-                            
-<a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a>
-                            <!-- End #projects -->
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            
-	    <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">jun 2024 – 2025</span><div data-date="Jan 2021 – September 2021" class="vtimeline-content">
-                <h3>Freelance</h3>
-                <h4>Data scientist</h4>
-                <li>Projects with Multilingual Long texts (summarization, semantic searches, RAG)</li>
-                <li>Evaluate, analyse and selection meathods for Embeddings.</li>
-            </div></div></div>	
-		
-	    <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">mar 2023 – jun 2024</span><div data-date="Jan 2021 – September 2021" class="vtimeline-content">
-                <h3>Hemico imaging</h3>
-                <h4>Algorithm developer</h4>
-                <li>Build the data pipelines. Applied analytical simulations to train generative 1D, 2D and 3D reconstruction.</li>
-                <li>Designed and implemented self-supervised image reconstruction tools using DL & ghost imaging.</li>
-		<li>Analyze the raw signals, noises, identify & solve systematic errors.</li>
-            </div></div></div>	
-		
-	<div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">November 2021 - Januar 2023</span><div data-date="November 2021 - Januar 2023" class="vtimeline-content">
-                <h3>DeepKeep</h3>
-                <h4>ML researcher</h4>
-                <li>Analyzing models week spot. Vision and tabular.</li>
-                <li>Implement attacks, evasion, anomaly &amp; poisoning detectors, robustness analysis, data drift, explainability, noises sensitivity.</li>
-                <li>AI security platform contributor.</li>
-            </div>
-	</div>
-	</div>
-		
-            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">Jan 2021 – September 2021</span><div data-date="Jan 2021 – September 2021" class="vtimeline-content">
-                <h3>Primrose</h3>
-                <h4>Data scientist</h4>
-                <li>Automatic handwriting recognition tool based on YOLO5</li>
-                <li>Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization and Data augmentation.</li>
-                <li>Multi labelled long text classifier on imbalanced dataset, by using distilled Roberta.</li>
-                <li>Define and run automatic crowd source labeling, combined with data augmentation</li>
-            </div></div></div>
-
-            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">Feb 2018 – Jan 2021</span><div data-date="Feb 2018 – Jan 2021" class="vtimeline-content">
-                <h3>HP Indigo</h3>
-                <h4>Algorithm architect</h4>
-                <p>
-                    Technological focal point and director of a team that developed and maintained Automatic Test Jigs. Includes pattern recognition, feature extraction, classical object detection and data analysis extracted from wide variety of sensors. 
-                </p>
-            </div></div></div>
-
-            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">2016 – 2018</span><div data-date="2016 – 2018" class="vtimeline-content">
-                <h3>Store-Dot</h3>
-                <h4>System Engineer </h4>
-                <p>System &amp; Optical engineering: research, development, and data analysis.</p>
-            </div></div></div>
-
-            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">2014 – 2016</span><div data-date="2014 – 2016" class="vtimeline-content">
-                <h3>Oxitone</h3>
-                <h4>System Engineer</h4>
-                <p>System &amp; Optical engineering: research, development, and data analysis.</p>
-            </div></div></div>
-        </div>
-        <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a>
-        <ul></ul>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education" align="center">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>Primrose</h3>
-            <span class="education-date">Feb 2021 - Jun 2021</span>
-            <h4>Data Science, Machine learning and Deep learning</h4>
-            <p>
-                NLP, Vision, Tabular, Voice. Unsupervised, dimantionality reduction, visualisations and more. 
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Hebrew University</h3>
-            <span class="education-date">2007 - 2011</span>
-            <h4>Master of Science, applied physics</h4>
-            <ul>
-                <li>Developed a generalization model for Electrode Polarization and validate it through measurements.</li>
-                <li>Built a unique measuring setup, optimaized by using finite element analysis and simulations.</li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-
-        
-        <div class="education-block">
-            <h3>Ben-Gurion  University</h3>
-            <span class="education-date">2003 - 2006</span>
-            <h4>Bachelor of Science, with excellence, Physics</h4>
-        </div>
-        <!-- End .education-block -->
-        <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a>
-        <ul></ul>
-    </div>
-    <!-- End #education -->
+    let currentProject = 0;
+    const projects = [
+        {
+            title: "Project 1",
+            image: "/api/placeholder/400/300",
+            details: "Details about Project 1"
+        },
+        // Add more projects as needed
+    ];
     
+    function showProject(index) {
+        const tile = document.querySelector('.project-tile');
+        const project = projects[index];
+        
+        tile.querySelector('.project-image').src = project.image;
+        tile.querySelector('.project-title').textContent = project.title;
+        tile.querySelector('.project-details p').textContent = project.details;
+    }
+    
+    document.querySelector('.left-arrow').addEventListener('click', () => {
+        currentProject = (currentProject - 1 + projects.length) % projects.length;
+        showProject(currentProject);
+    });
+    
+    document.querySelector('.right-arrow').addEventListener('click', () => {
+        currentProject = (currentProject + 1) % projects.length;
+        showProject(currentProject);
+    });
+    </script>
+<!-- End #projects -->
 
-<div id="s2">
-    <object data="./My Portfolio_files/Rainbow_Raindrops_loop.gif" width="1700" height="300"></object>  
-    <div id="s2-content">
-        <h1>Skills</h1>
-    </div>
-
-</div>
-
-<!-- End #lead -->
-
-<div id="skills">
-    <div class="left"></div>
-
-    <ul>
-        <h1 class="heading">Languages</h1>
-            <li><b><u>Python</u></b></li>
-            <li>C++</li>
-            <li>html</li>
-        <ul>
-        <h1 class="heading">Domains</h1>
-            <li>Data science</li>
-            <li>NLP</li>
-            <li>Computer Vision</li>
-            <li>Tabular</li>
-            <li>Audio</li>
-            <li>Time series</li>
-            <li>Sensors</li>
-        <ul></ul>
-        <br>
-        <h1 class="heading">ML tools</h1>
-            <li>Dimantionality reduction</li>
-            <li>Visualisations</li>
-            <li>Transfare learning</li>
-            <li>Knowledge distillation</li>
-            <li>Optimizations</li>
-        <ul>
-        <br>
-            <h1 class="heading">Modeling</h1>
-            <li>Pytorch</li>
-            <li>Tensorflow</li>
-            <li>Keras</li>
-            <li>NLTK</li>
-            <li>Scikit-Learn</li>
-            <li>HuggingFace</li>
-            <li>Optuna</li>
-        <ul>
-        <br>
-        <h1 class="heading">Visualization</h1>
-            <li>Matplotlib</li>
-            <li>Seaborn</li>
-            <li>Plotly</li>
-            <li>Tensorboard</li>
-        <ul>
-        <br>
-        <h1 class="heading">Infrastructure</h1>
-            <li>GIT</li>
-            <li>Bash</li>
-            <li>Docker</li>
-            <li>AWS</li>
-        <ul>
-        <br>
-        <h1 class="heading">Methodes</h1>
-            <li>Scripting</li>
-            <li>Debuging</li>
-            <li>Notebooks</li>
-            <li>Version control</li>
-        <ul>
-        <br>
-        <h1 class="heading">Database</h1>
-            <li>MongoDB</li>
-            <li>MLflow</li>
-            <li>SQL</li>
-            <li>Tableau</li>
-        <ul>
-        <br>
-        <h1 class="heading">Simulation tools</h1>
-            <li>Comsol multyphysics</li>
-            <li>Zemax</li>
-            <li>LightTools</li>
-        <ul>
-        <br>
-        <h1 class="heading">OS</h1>
-            <li>Linux</li>
-            <li>Windows</li>
-        <ul>
-        <br>
-        <h1 class="heading">Soft skills</h1>
-        <li>Curious</li>
-        <li>Enjoys tackling challenges</li>
-        <li>Logical and criticsl thinking</li>
-        <li>Can do approach</li>
-        <li>End to end attitude</li>
-        <li>Team player</li>
-        <li>Positive communication</li>
-        </ul>
-        <br>
-
-        <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a>
-        <ul></ul>
-    </ul></ul></ul></ul></ul></ul></ul></ul></ul></div>
-    <!-- End #skills -->
-    <!-- End #soft_skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/zivsobol@gmail.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website">
-                <input type="email" name="_replyto" placeholder="Your email" required="">
-                <textarea name="message" placeholder="Your message" required=""></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright © <span id="current-year">2022</span> Ziv Sobol
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Ziv2" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/ziv-sobol/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                   </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="./My Portfolio_files/jquery.min.js"></script>
-    <script src="./My Portfolio_files/scripts.min.js"></script>
-
-
-
-</body></html>
+</html>
