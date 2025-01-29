@@ -46,42 +46,51 @@
         </ul>
     </header>
     <!-- End header -->
-<div id="about">
-    <div class="container text-center">
-        <div class="row">
-            <h1 class="heading">Ziv Sobol</h1>
-            <br>
-            <div class="col-md-8">
-                <h4>Data scientist with extensive background in Machine Learning...</h4> 
-                <h4>Demonstrated experience in end-to-end product development...</h4> 
-                <h4>Strong foundation in applied mathematics...</h4>
+
+<div>
+    <div id="about" align=center>
+        <div class="container" align=center>
+            <div class="row" align=center>
+                <h1 class="heading" align=center>Ziv Sobol</h1>
+                <br>
+                <div class="col-md-8" align=center>
+                <h4>Data scientist with extensive background in Machine Learning, Deep Learning, data analysis, systems & multidisciplinary R&D.     </h4> 
+                <h4>Demonstrated experience in end-to-end product development, from research and prototyping to production deployment.               </h4> 
+		<h4>Strong foundation in applied mathematics, statistics, and algorithmic optimization.                                              </h4>
+                </div>
+                <div class="col-md-8" align=center>
+                <li>Advanced machine learning model development and optimization</li>
+                <li>Cross-functional R&D project leadership                     </li>
+                <li>Statistical analysis and experimental design                </li>
+                <li>Interdisciplinary research synthesis                        </li>
             </div>
-            <div class="col-md-8">
-                <ul>
-                    <li>Advanced machine learning model development and optimization</li>
-                    <li>Cross-functional R&D project leadership</li>
-                    <li>Statistical analysis and experimental design</li>
-                    <li>Interdisciplinary research synthesis</li>
-                </ul>
-            </div>
+        </div>
+        <div class="col-sm-5 social" align=left>
+            <ul>
+                <li>
+                    <a href="https://github.com/Ziv2" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ziv-sobol/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
     <!-- End #about -->
-<div id="projects" class="container">
-    <h2 class="heading">Projects</h2>
-    <div class="projects-container">
-        <!-- Your project tiles here -->
-        <div class="project-tile">
-            <img src="./images/CHATBOT.jpeg" alt="CHATBOT" class="project-image">
-            <div class="project-title">CHATBOT</div>
-            <div class="project-details">
-                <h3>CHATBOT</h3>
-                <p>Configurable bilingual chatbot...</p>
-                <a href="...">View Project</a>
-            </div>
-        </div>
+
     
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <title>Interactive Project Tiles</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    	<div id="projects" align="center">
+        <h2 class="heading">projects</h2>
+        <div class="projects-block">
+
+
+    <!-- <div class="projects-container"> -->
+        <!-- <div class="arrow left-arrow" onclick="prevProject()">
+    <img src="./images/arrow-clip-art-png-favpng-Utw3gtFkv8FJwRXrkuXw43S1E.png" alt="Previous Project" class="arrow-image" style="cursor: pointer;"> -->
 </div>
         <div class="project-tile-wrapper">
             <div class="project-tile" id="current-project">
@@ -96,6 +105,71 @@
         <!-- <div class="arrow right-arrow" onclick="nextProject()">
     <img src="./images/Right_Blue_Arrow_Transparent_PNG_Clip_Art_Image.png" alt="Next Project" class="arrow-image" style="cursor: pointer;"> -->
 </div>
+
+
+	
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projects = [
+                {
+                    image: 'images/CHATBOT.jpeg',
+                    title: 'CHATBOT',
+                    details: '<h3>Project 1</h3><p>Details about Project 1. This is where the detailed description goes, including the project\'s purpose, technologies used, and so on.</p>'
+                },
+                {
+                    image: 'images/NLP_AUG_0.4.jpg',
+                    title: 'NLP',
+                    details: '<h3>Project 2</h3><p>Details about Project 2. This is where the detailed description goes, including the project\'s purpose, technologies used, and so on.</p>'
+                }
+                // Add more projects as needed
+            ];
+
+            let currentIndex = 0;
+
+
+            function updateProject(index) {
+                const projectTile = document.getElementById('current-project');
+                projectTile.querySelector('.project-image').src = projects[index].image;
+                projectTile.querySelector('.project-title').textContent = projects[index].title;
+                projectTile.querySelector('.project-details').innerHTML = projects[index].details;
+            }
+
+            // window.prevProject = function() {
+            //     currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
+            //     updateProject(currentIndex);
+            // };
+
+            // window.nextProject = function() {
+            //     currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
+            //     updateProject(currentIndex);
+            // };
+        });
+    </script>
+
+
+<!--<div id="projects" class="background-alt" align=center>
+    <div id="lead" align=center>        
+        <div id="lead-content" align=center>
+            <h1>Ziv Sobol</h1>
+            <h2>Data scientist & ML researcher</h2>
+            <h3><b>Embraces challenges and loves people </b></h3>
+
+             <a href="https://github.com/Ziv2/ziv/blob/main/Files/cv_Ziv.pdf" download="cv_Ziv.pdf" class="btn-rounded-white">Download Resume</a>  
+        </div>
+         End #lead-content -->
+        <!-- Uncomment if you want a background 
+            <div id="lead-overlay"></div>
+
+            <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+                    <Uncomment if you want a background>
+             -->
+        <!--</div>
+         End #lead-down -->
+    <!--</div>
+    End #lead -->
 
 
 <html lang="en">
