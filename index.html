@@ -252,67 +252,112 @@
     <link rel="stylesheet" href="./css/styles.css">
 
         <!-- Projects Section -->
-import React from 'react';
-
-const projectsData = [
-  {
-    id: 1,
-    title: 'CHATBOT',
-    image: 'https://raw.githubusercontent.com/Ziv2/ziv/main/images/CHATBOT.jpeg',
-    description: 'Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization.',
-    link: 'https://github.com/primrose-deep-learning-schoo/myRobot'
-  },
-  {
-    id: 2,
-    title: 'NLP Augmentation',
-    image: 'https://raw.githubusercontent.com/Ziv2/ziv/main/images/NLP_AUG_0.4.jpg',
-    description: 'Synthetic sentences that preserve meaning, to augment chatbot training.',
-    link: 'https://github.com/Ziv2/NLP-Augmentation'
-  }
-];
-
-const PortfolioProjects = () => {
-  return (
-    <div className="bg-white py-12" id="projects">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Projects</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project) => (
-            <div 
-              key={project.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2"
-            >
-              <div className="relative">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity duration-300" />
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <a 
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300"
-                >
-                  View Project
-                </a>
-              </div>
+<!-- Projects Section -->
+<div id="projects" align="center">
+    <h2 class="heading">Projects</h2>
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-tile">
+            <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/CHATBOT.jpeg" alt="CHATBOT" class="project-image">
+            <div class="project-title">CHATBOT</div>
+            <div class="project-details">
+                <h3>CHATBOT</h3>
+                <p>Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization.</p>
+                <a href="https://github.com/primrose-deep-learning-schoo/myRobot">View Project</a>
             </div>
-          ))}
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default PortfolioProjects;
+        <!-- Project 2 -->
+        <div class="project-tile">
+            <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/NLP_AUG_0.4.jpg" alt="NLP Augmentation" class="project-image">
+            <div class="project-title">NLP Augmentation</div>
+            <div class="project-details">
+                <h3>NLP Augmentation</h3>
+                <p>Synthetic sentences that preserve meaning, to augment chatbot training.</p>
+                <a href="https://github.com/Ziv2/NLP-Augmentation">View Project</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-tile {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-title {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-details {
+    padding: 1rem;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+}
+
+.project-tile:hover .project-details {
+    opacity: 1;
+}
+
+.project-details h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project-details p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.project-details a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.project-details a:hover {
+    text-decoration: underline;
+}
+</style>
                
 <!-- <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a> -->
 <!-- End #projects -->
