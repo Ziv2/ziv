@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-    <link rel="shortcut icon" href="https://ziv2.github.io/ziv/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://ziv2.github.io/ziv/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://ziv2.github.io/ziv/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://ziv2.github.io/ziv/favicon.ico" type="image/x-icon">
     <link href="./My Portfolio_files/css" rel="stylesheet">
     <link rel="stylesheet" href="./My Portfolio_files/font-awesome.min.css"> 
     <link href="./My Portfolio_files/bootstrap.min.css" rel="stylesheet">
@@ -46,6 +46,31 @@
         }
 
         #menu a:hover {
+            color: #0066cc;
+        }
+
+        .about-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: #fff;
+        }
+
+        .social ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social a {
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social a:hover {
             color: #0066cc;
         }
 
@@ -210,7 +235,6 @@
         </div>
     </div>
     <!-- End #about -->
-
     
     <meta name="viewport" content="width=device-width", initial-scale=1.0>
     <title>Interactive Project Tiles</title>
@@ -220,18 +244,7 @@
         <h2 class="heading">projects</h2>
         <div class="projects-block">
 
-
-    <!-- <div class="projects-container"> -->
-        <!-- <div class="arrow left-arrow" onclick="prevProject()">
-    <img src="./images/arrow-clip-art-png-favpng-Utw3gtFkv8FJwRXrkuXw43S1E.png" alt="Previous Project" class="arrow-image" style="cursor: pointer;"> -->
-    
-
-
-
-
-    <!-- Projects Section -->    <!-- Previous content remains the same until projects section -->
-    
-    <!-- Projects Section - Using the working structure -->
+    <!-- Projects Section -->
     <div id="projects">
         <h2 class="heading">Projects</h2>
         <div class="projects-container">
@@ -245,7 +258,7 @@
                 </div>
             </div>
 
-            <div class="project-tile">
+		<div class="project-tile">
                 <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/NLP_AUG_0.4.jpg" alt="NLP Augmentation" class="project-image">
                 <div class="project-title">NLP Augmentation</div>
                 <div class="project-details">
@@ -266,7 +279,7 @@
             </div>
 
             <div class="project-tile">
-                <img src="/api/placeholder/400/320" alt="OXITONE" class="project-image">
+                <img src="https://raw.githubusercontent.com/Ziv2/ziv/blob/main/images/OXITONE.JPG" alt="OXITONE" class="project-image">
                 <div class="project-title">OXITONE: Oximeter R&D</div>
                 <div class="project-details">
                     <h3>The First Wrist Oximeter</h3>
@@ -566,8 +579,9 @@
     </footer>
     <!-- End footer -->
 
-
     <script src="./My Portfolio_files/jquery.min.js"></script>
     <script src="./My Portfolio_files/scripts.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+
+
 </body></html>
