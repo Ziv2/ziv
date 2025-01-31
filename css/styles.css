@@ -185,20 +185,6 @@ header {
     margin: 0 auto;
 }
 
-.project-tile {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-}
-
-.project-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
 
 .project-image {
     width: 100%;
@@ -227,9 +213,7 @@ header {
     overflow-y: auto;
 }
 
-.project-tile:hover .project-details {
-    opacity: 1;
-}
+
 
 .project-details h3 {
     margin-top: 0;
@@ -297,6 +281,39 @@ header {
   margin: 0 auto;
 }
 
+
+/* .project-tile {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+ */
+/* .project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+} */
+
+
+/* .project-tile {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+} */
+/* .project-tile.active {
+  display: block;
+}
+.project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+} */
 /* Project Tiles */
 .project-tile {
   display: none;
@@ -304,11 +321,6 @@ header {
   padding: 20px;
   border: 1px solid #ccc;
 }
-
-.project-tile.active {
-  display: block;
-}
-
 .project-tile img {
   max-width: 100%;
   cursor: pointer;
@@ -319,13 +331,13 @@ header {
   transform: scale(1.05);
 }
 
+.project-tile.expanded .project-text {
+  display: block;
+}
+
 .project-text {
   display: none;
   margin-top: 15px;
-}
-
-.project-tile.expanded .project-text {
-  display: block;
 }
 
 /* Navigation Arrows */
@@ -350,9 +362,53 @@ header {
   color: #000;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-title {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-details {
+    padding: 1rem;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
 /* Qwen changes://///////////////////////////////////////  
 /* General Section Styling */
-#experience {
+/* #experience {
     margin: 40px 0;
     padding: 20px;
     background-color: #f9f9f9;
@@ -381,16 +437,16 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
+} */
 
 /* Individual Experience Item Styling */
-.experience-item {
+/* .experience-item {
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+} 
 
 .experience-item:hover {
     transform: translateY(-5px);
@@ -417,4 +473,4 @@ header {
 
 .job-responsibilities li {
     margin-bottom: 5px;
-}
+}*/
