@@ -7,293 +7,205 @@
         <title>My Portfolio</title>
         <link rel="shortcut icon" href="https://ziv2.github.io/ziv/favicon.ico" type="image/x-icon">
         <link rel="icon" href="https://ziv2.github.io/ziv/favicon.ico" type="image/x-icon">
-        <link href="./css" rel="stylesheet">
-        <link rel="stylesheet" href="./font-awesome.min.css"> 
-        <link href="./bootstrap.min.css" rel="stylesheet">
-        <link href="./styles.css" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        header {
-            background: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        #menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        #menu a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        #menu a:hover {
-            color: #0066cc;
-        }
-
-        .about-section {
-            padding: 4rem 0;
-            text-align: center;
-            background: #fff;
-        }
-
-        .social ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .social a {
-            color: #333;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social a:hover {
-            color: #0066cc;
-        }
-
-        /* Projects Section Styles */
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .project-tile {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-tile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .project-title {
-            padding: 1rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .project-details {
-            padding: 1rem;
-            background: rgba(255,255,255,0.95);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .project-tile:hover .project-details {
-            opacity: 1;
-        }
-
-        .project-details h3 {
-            margin-top: 0;
-            color: #333;
-        }
-
-        .project-details p {
-            color: #666;
-            line-height: 1.5;
-        }
-
-        .project-details a {
-            display: inline-block;
-            margin-top: 0.5rem;
-            margin-right: 1rem;
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .project-details a:hover {
-            text-decoration: underline;
-        }
-
-        .heading {
-            text-align: center;
-            padding: 2rem 0;
-            font-size: 2.5rem;
-            color: #333;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            #menu {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            
-            .projects-container {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-        }
-    </style>
+        <link href="./My Portfolio_files/css" rel="stylesheet">
+        <link rel="stylesheet" href="./My Portfolio_files/font-awesome.min.css"> 
+        <link href="./My Portfolio_files/bootstrap.min.css" rel="stylesheet">
+        <link href="./My Portfolio_files/styles.css" rel="stylesheet">
 </head>
-
-    
 <body>
     <!-- Mobile menu and header -->
-    <div id="mobile-menu-open" class="shadow-large">
+
+    <div id="mobile-menu-open" align="center" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-
+    <!-- End #mobile-menu-toggle -->
     <header>
-        <div id="mobile-menu-close">
+            <!-- Header content -->
+
+        <div id="mobile-menu-close" align="center">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
         <ul id="menu" class="shadow">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="https://ziv2.github.io/ziv/#about">About</a>
+            </li>
+            <li>
+                <a href="https://ziv2.github.io/ziv/#experience">Experience</a>
+            </li>
+            <li>
+                <a href="https://ziv2.github.io/ziv/#education">Education</a>
+            </li>
+            <li>
+                <a href="https://ziv2.github.io/ziv/#projects">Projects</a>
+            </li>
+            <li>
+                <a href="https://ziv2.github.io/ziv/#skills">Skills</a>
+            </li>
+            <li>
+                <a href="https://ziv2.github.io/ziv/#contact">Contact</a>
+            </li>
         </ul>
     </header>
+    <!-- End header -->
+<img src="https://avatars.githubusercontent.com/u/41025885?s=400&u=2b8e671e9dd305802897d5176593cdcd638a5daa&v=4" align="center">
 
-    <!-- About Section -->
-    <div id="about" class="about-section">
-        <div class="container">
-            <div class="row">
-                <h1 class="heading">Ziv Sobol</h1>
-                <div class="col-md-8">
-                    <h4>Data scientist with extensive background in Machine Learning, Deep Learning, data analysis, systems & multidisciplinary R&D.</h4>
-                    <h4>Demonstrated experience in end-to-end product development, from research and prototyping to production deployment.</h4>
-                    <h4>Strong foundation in applied mathematics, statistics, and algorithmic optimization.</h4>
+<div>
+    <div id="about" align=center>
+        <div class="container" align=center>
+            <div class="row" align=center>
+                <h1 class="heading" align=center>Ziv Sobol</h1>
+                <br>
+                <div class="col-md-8" align=center>
+                <h4>Data scientist with extensive background in Machine Learning, Deep Learning, data analysis, systems & multidisciplinary R&D.     </h4> 
+                <h4>Demonstrated experience in end-to-end product development, from research and prototyping to production deployment.               </h4> 
+		<h4>Strong foundation in applied mathematics, statistics, and algorithmic optimization.                                              </h4>
                 </div>
-                <div class="social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Ziv2" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/ziv-sobol/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
+                <div class="col-md-8" align=center>
+                <li>Advanced machine learning model development and optimization</li>
+                <li>Cross-functional R&D project leadership                     </li>
+                <li>Statistical analysis and experimental design                </li>
+                <li>Interdisciplinary research synthesis                        </li>
             </div>
+        </div>
+        <div class="col-sm-5 social" align=left>
+            <ul>
+                <li>
+                    <a href="https://github.com/Ziv2" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ziv-sobol/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </div>
     </div>
 
-    <!-- Projects Section -->
-<div id="projects" align="center">
-    <h2 class="heading">Projects</h2>
-    <div class="projects-container">
-        <!-- Project 1 -->
-        <div class="project-tile">
-            <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/CHATBOT.jpeg" alt="CHATBOT" class="project-image">
-            <div class="project-title">CHATBOT</div>
-            <div class="project-details">
-                <h3>CHATBOT</h3>
-                <p>Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization.</p>
-                <a href="https://github.com/primrose-deep-learning-schoo/myRobot">View Project</a>
-            </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="project-tile">
-            <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/NLP_AUG_0.4.jpg" alt="NLP Augmentation" class="project-image">
-            <div class="project-title">NLP Augmentation</div>
-            <div class="project-details">
-                <h3>NLP Augmentation</h3>
-                <p>Synthetic sentences that preserve meaning, to augment chatbot training.</p>
-                <a href="https://github.com/Ziv2/NLP-Augmentation">View Project</a>
+</div>
+</div>
+
+    <!-- End #about -->
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <title>Interactive Project Tiles</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+        <!-- Projects Section -->
+        <!-- Projects Section - FIXED -->
+        <div id="projects" align="center">
+            <h2 class="heading">Projects</h2>
+		<div class="projects-block">
+
+<!--             <div class="projects-container"> -->
+                <!-- Project tiles remain exactly the same -->
+                <div class="project-tile">
+                    <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/CHATBOT.jpeg" alt="CHATBOT" class="project-image">
+                    <div class="project-title">CHATBOT</div>
+                    <div class="project-details">
+                        <h3>CHATBOT</h3>
+                        <p>Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization.</p>
+                        <a href="https://github.com/primrose-deep-learning-schoo/myRobot">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-tile">
+                    <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/NLP_AUG_0.4.jpg" alt="NLP Augmentation" class="project-image">
+                    <div class="project-title">NLP Augmentation</div>
+                    <div class="project-details">
+                        <h3>NLP Augmentation</h3>
+                        <p>Synthetic sentences that preserve meaning, to augment chatbot training.</p>
+                        <a href="https://github.com/Ziv2/NLP-Augmentation">View Project</a>
+                    </div>
+                </div>
+
+                <!-- ... Rest of the project tiles remain exactly the same ... -->
             </div>
         </div>
     </div>
 </div>
 
-    <!-- Experience Section -->
+
+
+
+<div class="scroll-to-top">
+    <a href="#top">Scroll to Top</a>
+</div>
+               
+<!-- <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a> -->
+<!-- End #projects -->
+
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <!-- Current -->
-            <div class="vtimeline-point">
-                <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
-                <div class="vtimeline-block">
-                    <span class="vtimeline-date">jun 2024 – 2025</span>
-                    <div class="vtimeline-content">
-                        <h3>Freelance</h3>
-                        <h4>Data scientist</h4>
-                        <li>Projects with Multilingual Long texts (summarization, semantic searches, RAG)</li>
-                        <li>Evaluate, analyse and selection meathods for Embeddings.</li>
-                    </div>
-                </div>
+            
+	    <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">jun 2024 – 2025</span><div data-date="Jan 2021 – September 2021" class="vtimeline-content">
+                <h3>Freelance</h3>
+                <h4>Data scientist</h4>
+                <li>Projects with Multilingual Long texts (summarization, semantic searches, RAG)</li>
+                <li>Evaluate, analyse and selection meathods for Embeddings.</li>
+            </div></div></div>	
+		
+	    <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">mar 2023 – jun 2024</span><div data-date="Jan 2021 – September 2021" class="vtimeline-content">
+                <h3>Hemico imaging</h3>
+                <h4>Algorithm developer</h4>
+                <li>Build the data pipelines. Applied analytical simulations to train generative 1D, 2D and 3D reconstruction.</li>
+                <li>Designed and implemented self-supervised image reconstruction tools using DL & ghost imaging.</li>
+		<li>Analyze the raw signals, noises, identify & solve systematic errors.</li>
+            </div></div></div>	
+		
+	<div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">November 2021 - Januar 2023</span><div data-date="November 2021 - Januar 2023" class="vtimeline-content">
+                <h3>DeepKeep</h3>
+                <h4>ML researcher</h4>
+                <li>Analyzing models week spot. Vision and tabular.</li>
+                <li>Implement attacks, evasion, anomaly &amp; poisoning detectors, robustness analysis, data drift, explainability, noises sensitivity.</li>
+                <li>AI security platform contributor.</li>
             </div>
+	</div>
+	</div>
+		
+            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">Jan 2021 – September 2021</span><div data-date="Jan 2021 – September 2021" class="vtimeline-content">
+                <h3>Primrose</h3>
+                <h4>Data scientist</h4>
+                <li>Automatic handwriting recognition tool based on YOLO5</li>
+                <li>Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization and Data augmentation.</li>
+                <li>Multi labelled long text classifier on imbalanced dataset, by using distilled Roberta.</li>
+                <li>Define and run automatic crowd source labeling, combined with data augmentation</li>
+            </div></div></div>
 
-            <!-- Previous Experience -->
-            <div class="vtimeline-point">
-                <div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>
-                <div class="vtimeline-block">
-                    <span class="vtimeline-date">mar 2023 – jun 2024</span>
-                    <div class="vtimeline-content">
-                        <h3>Hemico imaging</h3>
-                        <h4>Algorithm developer</h4>
-                        <li>Build the data pipelines. Applied analytical simulations to train generative 1D, 2D and 3D reconstruction.</li>
-                        <li>Designed and implemented self-supervised image reconstruction tools using DL & ghost imaging.</li>
-                        <li>Analyze the raw signals, noises, identify & solve systematic errors.</li>
-                    </div>
-                </div>
-            </div>
+            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">Feb 2018 – Jan 2021</span><div data-date="Feb 2018 – Jan 2021" class="vtimeline-content">
+                <h3>HP Indigo</h3>
+                <h4>Algorithm architect</h4>
+                <p>
+                    Technological focal point and director of a team that developed and maintained Automatic Test Jigs. Includes pattern recognition, feature extraction, classical object detection and data analysis extracted from wide variety of sensors. 
+                </p>
+            </div></div></div>
 
-            <!-- Add other experience sections as needed -->
+            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">2016 – 2018</span><div data-date="2016 – 2018" class="vtimeline-content">
+                <h3>Store-Dot</h3>
+                <h4>System Engineer </h4>
+                <p>System &amp; Optical engineering: research, development, and data analysis.</p>
+            </div></div></div>
+
+            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">2014 – 2016</span><div data-date="2014 – 2016" class="vtimeline-content">
+                <h3>Oxitone</h3>
+                <h4>System Engineer</h4>
+                <p>System &amp; Optical engineering: research, development, and data analysis.</p>
+            </div></div></div>
         </div>
+        <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a>
+        <ul></ul>
     </div>
+    <!-- End #experience -->
 
-    <!-- Education Section -->
-    <div id="education">
+    <div id="education" align="center">
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>Primrose</h3>
             <span class="education-date">Feb 2021 - Jun 2021</span>
             <h4>Data Science, Machine learning and Deep learning</h4>
-            <p>NLP, Vision, Tabular, Voice. Unsupervised, dimantionality reduction, visualisations and more.</p>
+            <p>
+                NLP, Vision, Tabular, Voice. Unsupervised, dimantionality reduction, visualisations and more. 
+            </p>
         </div>
+        <!-- End .education-block -->
 
         <div class="education-block">
             <h3>Hebrew University</h3>
@@ -304,35 +216,146 @@
                 <li>Built a unique measuring setup, optimaized by using finite element analysis and simulations.</li>
             </ul>
         </div>
+        <!-- End .education-block -->
+
+        
+        <div class="education-block">
+            <h3>Ben-Gurion  University</h3>
+            <span class="education-date">2003 - 2006</span>
+            <h4>Bachelor of Science, with excellence, Physics</h4>
+        </div>
+        <!-- End .education-block -->
+        <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a>
+        <ul></ul>
+    </div>
+    <!-- End #education -->
+    
+
+<div id="s2">
+    <object data="./My Portfolio_files/Rainbow_Raindrops_loop.gif" width="1700" height="300"></object>  
+    <div id="s2-content">
+        <h1>Skills</h1>
     </div>
 
-    <!-- Skills Section -->
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
+</div>
+
+<!-- End #lead -->
+
+<div id="skills">
+    <div class="left"></div>
+
+    <ul>
+        <h1 class="heading">Languages</h1>
+            <li><b><u>Python</u></b></li>
+            <li>C++</li>
+            <li>html</li>
         <ul>
-            <!-- Add your skills here -->
+        <h1 class="heading">Domains</h1>
+            <li>Data science</li>
+            <li>NLP</li>
+            <li>Computer Vision</li>
+            <li>Tabular</li>
+            <li>Audio</li>
+            <li>Time series</li>
+            <li>Sensors</li>
+        <ul></ul>
+        <br>
+        <h1 class="heading">ML tools</h1>
+            <li>Dimantionality reduction</li>
+            <li>Visualisations</li>
+            <li>Transfare learning</li>
+            <li>Knowledge distillation</li>
+            <li>Optimizations</li>
+        <ul>
+        <br>
+            <h1 class="heading">Modeling</h1>
+            <li>Pytorch</li>
+            <li>Tensorflow</li>
+            <li>Keras</li>
+            <li>NLTK</li>
+            <li>Scikit-Learn</li>
+            <li>HuggingFace</li>
+            <li>Optuna</li>
+        <ul>
+        <br>
+        <h1 class="heading">Visualization</h1>
+            <li>Matplotlib</li>
+            <li>Seaborn</li>
+            <li>Plotly</li>
+            <li>Tensorboard</li>
+        <ul>
+        <br>
+        <h1 class="heading">Infrastructure</h1>
+            <li>GIT</li>
+            <li>Bash</li>
+            <li>Docker</li>
+            <li>AWS</li>
+        <ul>
+        <br>
+        <h1 class="heading">Methodes</h1>
+            <li>Scripting</li>
+            <li>Debuging</li>
+            <li>Notebooks</li>
+            <li>Version control</li>
+        <ul>
+        <br>
+        <h1 class="heading">Database</h1>
+            <li>MongoDB</li>
+            <li>MLflow</li>
+            <li>SQL</li>
+            <li>Tableau</li>
+        <ul>
+        <br>
+        <h1 class="heading">Simulation tools</h1>
+            <li>Comsol multyphysics</li>
+            <li>Zemax</li>
+            <li>LightTools</li>
+        <ul>
+        <br>
+        <h1 class="heading">OS</h1>
+            <li>Linux</li>
+            <li>Windows</li>
+        <ul>
+        <br>
+        <h1 class="heading">Soft skills</h1>
+        <li>Curious</li>
+        <li>Enjoys tackling challenges</li>
+        <li>Logical and criticsl thinking</li>
+        <li>Can do approach</li>
+        <li>End to end attitude</li>
+        <li>Team player</li>
+        <li>Positive communication</li>
         </ul>
-    </div>
+        <br>
 
-    <!-- Contact Section -->
+        <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a>
+        <ul></ul>
+    </ul></ul></ul></ul></ul></ul></ul></ul></ul></div>
+    <!-- End #skills -->
+    <!-- End #soft_skills -->
+
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
             <form method="POST" action="https://formspree.io/zivsobol@gmail.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website">
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
+                <input type="email" name="_replyto" placeholder="Your email" required="">
+                <textarea name="message" placeholder="Your message" required=""></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
-    </div>
+        <!-- End #contact-form -->
 
-    <!-- Footer -->
+    </div>
+    <!-- End #contact -->
+
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 copyright">
-                    <p>Copyright © <span id="current-year">2024</span> Ziv Sobol</p>
+                    <p>
+                        Copyright © <span id="current-year">2022</span> Ziv Sobol
+                    </p>
                 </div>
                 <div class="col-sm-2 top">
                     <span id="to-top">
@@ -347,14 +370,16 @@
                         <li>
                             <a href="https://www.linkedin.com/in/ziv-sobol/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
-                    </ul>
+                   </ul>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- End footer -->
 
-    <!-- Scripts -->
-    <script src="./jquery.min.js"></script>
-    <script src="./scripts.min.js"></script>
-</body>
-</html>
+    <script src="./My Portfolio_files/jquery.min.js"></script>
+    <script src="./My Portfolio_files/scripts.min.js"></script>
+
+
+
+</body></html>
