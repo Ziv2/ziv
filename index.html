@@ -84,6 +84,10 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+/* 	.projects-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            } */
 
 /*         .project-tile {
             background: white;
@@ -167,10 +171,7 @@
                 gap: 1rem;
             }
             
-/*             .projects-container {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            } */
+
         }
     </style>
 </head>
@@ -251,36 +252,67 @@
     <link rel="stylesheet" href="./css/styles.css">
 
         <!-- Projects Section -->
-	<div id="projects" align="center">
-    <h2 class="heading">Projects</h2>
-    <div class="projects-container">
-        <!-- Project tiles -->
-        <div class="project-tile">
-            <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/CHATBOT.jpeg" alt="CHATBOT" class="project-image">
-            <div class="project-title">CHATBOT</div>
-            <div class="project-details">
-                <h3>CHATBOT</h3>
-                <p>Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization.</p>
-                <a href="https://github.com/primrose-deep-learning-schoo/myRobot">View Project</a>
-            </div>
-        </div>
+import React from 'react';
 
-        <div class="project-tile">
-            <img src="https://raw.githubusercontent.com/Ziv2/ziv/main/images/NLP_AUG_0.4.jpg" alt="NLP Augmentation" class="project-image">
-            <div class="project-title">NLP Augmentation</div>
-            <div class="project-details">
-                <h3>NLP Augmentation</h3>
-                <p>Synthetic sentences that preserve meaning, to augment chatbot training.</p>
-                <a href="https://github.com/Ziv2/NLP-Augmentation">View Project</a>
+const projectsData = [
+  {
+    id: 1,
+    title: 'CHATBOT',
+    image: 'https://raw.githubusercontent.com/Ziv2/ziv/main/images/CHATBOT.jpeg',
+    description: 'Configurable bilingual chatbot based on the ConveRT enhanced question-response Transformer architecture. Slim encoder, transfer learning training followed by few-shot customization.',
+    link: 'https://github.com/primrose-deep-learning-schoo/myRobot'
+  },
+  {
+    id: 2,
+    title: 'NLP Augmentation',
+    image: 'https://raw.githubusercontent.com/Ziv2/ziv/main/images/NLP_AUG_0.4.jpg',
+    description: 'Synthetic sentences that preserve meaning, to augment chatbot training.',
+    link: 'https://github.com/Ziv2/NLP-Augmentation'
+  }
+];
+
+const PortfolioProjects = () => {
+  return (
+    <div className="bg-white py-12" id="projects">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Projects</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectsData.map((project) => (
+            <div 
+              key={project.id}
+              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2"
+            >
+              <div className="relative">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity duration-300" />
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <a 
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300"
+                >
+                  View Project
+                </a>
+              </div>
             </div>
+          ))}
         </div>
+      </div>
     </div>
-</div>
+  );
+};
 
-
-<div class="scroll-to-top">
-    <a href="#top">Scroll to Top</a>
-</div>
+export default PortfolioProjects;
                
 <!-- <a href="https://ziv2.github.io/ziv/#top">Scroll to Top</a> -->
 <!-- End #projects -->
