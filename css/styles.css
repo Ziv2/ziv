@@ -109,6 +109,7 @@ footer{padding:50px 0}.copyright{padding-top:20px}.copyright p{margin:0;color:#7
 #lead-content h2{font-size:1em}
 #lead-content a{font-size:0.9em;padding:5px 10px}}
 
+
 /* The inline styles*/
 /* Base Styles */
 body {
@@ -174,7 +175,14 @@ header {
 .social a:hover {
     color: #0066cc;
 }
-
+.project {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+}
 /* Projects Section Styles */
 .projects-container {
     display: grid;
